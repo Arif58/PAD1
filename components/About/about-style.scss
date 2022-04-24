@@ -1,0 +1,39 @@
+.root {
+  blockquote {
+    margin: spacing(5, 4, 0);
+    font-size: 17px; // ubah dari 20 ke 17
+    font-style: italic;
+    @include padding-left($spacing2);
+    @include palette-text-secondary;
+    .v-application--is-ltr & {
+      border-left: 4px solid;
+    }
+    .v-application--is-rtl & {
+      border-right: 4px solid;
+    }
+    .theme--light & {
+      border-color: #D8D8D8;
+    }
+    .theme--dark & {
+      border-left-color: rgba(255, 255, 255, 0.2);
+    }
+    @include breakpoints-down(xs) {
+      @include padding-left($spacing2);
+      margin: 0;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  padding-top: 74px;
+  h4 {
+    @include breakpoints-down(sm) {
+      text-align: center;
+      margin-top: $spacing1 * -3;
+    }
+  }
+  p {
+    text-align: justify;
+    margin: 10px 0;
+    font-size: 17px;
+  }
+}

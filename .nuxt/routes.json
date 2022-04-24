@@ -1,0 +1,20 @@
+[
+  {
+    "name": "index___id",
+    "path": "/id",
+    "component": "D:\\\\landing-page-data-rawat\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "blank-page___id",
+    "path": "/id/blank-page",
+    "component": "D:\\\\landing-page-data-rawat\\\\pages\\\\blank-page.vue",
+    "chunkName": "pages/blank-page"
+  },
+  {
+    "name": "contact___id",
+    "path": "/id/contact",
+    "component": "D:\\\\landing-page-data-rawat\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact"
+  }
+]

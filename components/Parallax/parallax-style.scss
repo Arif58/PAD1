@@ -1,0 +1,99 @@
+.parallax-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @include left(0);
+  z-index: 0;
+  @include breakpoints-down(md) {
+    display: none;
+  }
+}
+
+.inner-parallax {
+  height: 800px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  .figure {
+    height: 800px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    ::v-deep .Masthead, ::v-deep .Masthead__image {
+      overflow: visible
+    }
+  }
+  .figure > div {
+    height: 800px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.parallax-oval {
+  border-radius: 50%;
+  @include left(-12%);
+  position: absolute;
+  @include breakpoints-up(xl) {
+    display: none
+  }
+}
+
+.parallax-primary {
+  @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+  width: 700px;
+  height: 700px;
+  opacity: 0.2;
+}
+
+.banner {
+  .parallax-primary {
+    @include right(240px);
+    top: 110px;
+  }
+}
+
+.about {
+  top: 350px;
+  .parallax-primary {
+    top: 190px;
+  }
+}
+
+.dots-wrap {
+  top: 800px;
+  width: 600px;
+  height: 800px;
+  position: absolute;
+  z-index: 2
+}
+
+.testi {
+  top: -400px;
+  @include left(50px)
+}
+
+.parallax-dot {
+  .theme--dark & {
+    fill: $dark-text-hint
+  } 
+  .theme--light & {
+    fill: $light-text-hint
+  } 
+  width: 845px;
+  height: 1099px;
+  opacity: 0.2;
+  top: 90px;
+  @include left(10px);
+  transform: scale(0.5);
+  position: absolute;
+  .v-application--is-rtl & {
+    transform-origin: top right;
+  }
+  .v-application--is-ltr & {
+    transform-origin: top left;
+  }
+}
